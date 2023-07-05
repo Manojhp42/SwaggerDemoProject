@@ -1,0 +1,17 @@
+server:
+    port: 7070
+spring:
+    datasource:
+        password: root
+        url: jdbc:postgresql://localhost:5432/EmployeeExampleDB
+        username: postgres
+    jpa:
+        hibernate:
+            ddl-auto: update
+            show-sql: true
+    mvc:
+        pathmatch:
+            matching-strategy: ant-path-matcher
+            
+local:
+  base-url: ${URL:http://localhost:6060/EmpController}
